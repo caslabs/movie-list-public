@@ -26,12 +26,12 @@ module.exports.putMovies = (event, context, callback) => {
 
   const putMovies = `UPDATE ${table} SET name = $1, grade = $2 WHERE id = $3`;
 
-  let {name, grade_level, id } = event.body;
+  let {movie_id, movie_title, movie_year_released, movie_genre, movie_picture} = event.body;
 
   pool.connect()
     .then(client => {
       client.release();
-      return client.query(putMovies, [name, grade_level, id]);
+      return client.query(putMovies, [movie_id, movie_title, movie_year_released, movie_genre, movie_picture]);
     })
     .then(data => {
       const response = {
