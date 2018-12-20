@@ -25,12 +25,12 @@ module.exports.postMovies = (event, context, callback) => {
 
   const postMovies = `INSERT INTO ${table} VALUES (default, $1, $2, $3, $4)`;
 
-  let {movie_id, movie_title, movie_year_released, movie_genre, movie_picture} = event.body
+  let {movie_title, movie_year_released, movie_genre, movie_picture} = event.body
 
   pool.connect()
     .then(client => {
       client.release();
-      return client.query(postMovies, [movie_id, movie_title, movie_year_released, movie_genre, movie_picture]);
+      return client.query(postMovies, [movie_title, movie_year_released, movie_genre, movie_picture]);
     })
     .then(data => {
       const response = {

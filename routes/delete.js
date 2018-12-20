@@ -24,14 +24,14 @@ console.log('table', table)
 
 module.exports.deleteMovies = (event, context, callback) => {
 
-  const deleteMovies = `DELETE FROM ${table} WHERE id=$1`
+  const deleteMovies = `DELETE FROM ${table} WHERE movie_id=$1`
 
-  let {id}= event.body
+  let {movie_id}= event.body
 
   pool.connect()
     .then(client => {
       client.release();
-      return client.query(deleteMovies, [id]);
+      return client.query(deleteMovies, [movie_id]);
     })
     .then(data => {
       const response = {
