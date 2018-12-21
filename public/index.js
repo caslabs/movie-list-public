@@ -1,9 +1,10 @@
-function getList() {
+function getMovieList() {
     axios.get('https://bewc7jy4y8.execute-api.us-west-2.amazonaws.com/dev/JarJerLar')
     .then(function (response) {
       var MovieData =  response.data.message.rows;
       MovieData.forEach(function (movie) {
-        console.log(`ID: ${movie.movie_id} NAME:  ${movie.movie_title}`);
+        document.querySelector('#movie_cat').innerHTML += `<h1> NAME:  ${movie.movie_title}</h1> <h2> YEAR :${movie.movie_year_released} </h2> <h3>GENRE: ${movie.movie_genre}</h3> <img src="${movie.movie_picture}"  />`
+        console.log(`${movie.movie_picture}`); //img src dont load? add new data w/ img pics
       }); 
     })
     .catch(function (error) {
@@ -11,4 +12,6 @@ function getList() {
     });
   }
 
-getList()
+getMovieList()
+
+
