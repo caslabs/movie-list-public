@@ -15,3 +15,19 @@ function getMovieList() {
 getMovieList()
 
 
+function movie_post(){
+  event.preventDefault;
+  axios.post('https://0wq13wq7vj.execute-api.us-west-2.amazonaws.com/dev/post', {
+    movie_title: movie.movie_title,
+    movie_year_release: movie.movie_year_released,
+    movie_genre: movie.movie_genre,
+    movie_picture: movie.movie_picture
+  })
+  .then(function (response) {
+    console.log(response);
+    getList()
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+};
