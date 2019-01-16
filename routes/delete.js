@@ -24,7 +24,7 @@ console.log('table', table)
 
 module.exports.deleteMovies = (event, context, callback) => {
 
-  const deleteMovies = `DELETE FROM ${table} WHERE movie_id=$1`
+  const deleteMovies = `DELETE FROM ${table} WHERE movie_id = $1;`
 
   let {movie_id}= event.body
 
