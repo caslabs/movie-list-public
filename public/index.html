@@ -8,11 +8,14 @@
     <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-        <a href="./edit/edit.html" class="myButton">Edit</a>
-        <a href="./post/post.html" class="myButton">Post</a>
+    <a href="./delete/delete.html" class="myButton">Delete</a>
+    <a href="./post/post.html" class="myButton">Post</a>
+
     <div id="movie_cat"></div>
 
     <form id="id" action="">
+        <h2>Edit Movies</h2>
+        Movie ID <br>
         <input id = "id_choice" type="text" name="chooseid" placeholder="movie id"> <br>
         Movie Title <br>
         <input id = "movieTitle_id" type="text" name="movieTitle" placeholder="Movie title"><br>
@@ -23,7 +26,7 @@
         Movie Picture<br>
         <input id = "moviePicture_id" type="text" name="moviePicture" placeholder="Image"><br>
         <input id = "update" type="submit" value="Submit">
-      </form>
+    </form>
 
     <script src="./index.js"></script>
     <script src="./edit/edit.js"></script>
