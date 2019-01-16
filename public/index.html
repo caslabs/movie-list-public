@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./index.css">
+
 </head>
+
 <body>
-    <a href="./delete/delete.html" class="myButton">Delete</a>
-    <a href="./post/post.html" class="myButton">Post</a>
+    <h1 id="title">The Mininum Viable MovieHub</h1>
 
-    <div id="movie_cat"></div>
+    <div id="btn">
+            <a href="./delete/delete.html" class="myButton">Delete</a>
+            <a href="./post/post.html" class="myButton">Post</a>
+        </div>
 
-    <form id="id" action="">
-        <h2>Edit Movies</h2>
-        Movie ID <br>
-        <input id = "id_choice" type="text" name="chooseid" placeholder="movie id"> <br>
-        Movie Title <br>
-        <input id = "movieTitle_id" type="text" name="movieTitle" placeholder="Movie title"><br>
-        Released Date<br>
-        <input id = "releaseDate_id" type="text" name="releaseDate" placeholder="Release date"><br>
-        Genre<br>
-        <input id = "movieGenre_id" type="text" name="movieGenre" placeholder="Genre"><br>
-        Movie Picture<br>
-        <input id = "moviePicture_id" type="text" name="moviePicture" placeholder="Image"><br>
-        <input id = "update" type="submit" value="Submit">
-    </form>
+    <div id="ctn">
+            <form id="id" action="">
+                    <h2>Edit Movies</h2>
+                    Movie ID <br>
+                    <input id="id_choice" type="text" name="chooseid" placeholder="movie id"> <br>
+                    Movie Title <br>
+                    <input id="movieTitle_id" type="text" name="movieTitle" placeholder="Movie title"><br>
+                    Released Date<br>
+                    <input id="releaseDate_id" type="text" name="releaseDate" placeholder="Release date"><br>
+                    Genre<br>
+                    <input id="movieGenre_id" type="text" name="movieGenre" placeholder="Genre"><br>
+                    Movie Picture<br>
+                    <input id="moviePicture_id" type="text" name="moviePicture" placeholder="Image"><br>
+                    <input id="update" type="submit" value="Submit">
+                </form>
+        
+        <div id="movie_cat"></div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="../slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
     <script src="./index.js"></script>
     <script src="./edit/edit.js"></script>
 
+
+
+
 </body>
+
 </html>
