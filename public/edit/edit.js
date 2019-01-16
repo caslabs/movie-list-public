@@ -6,7 +6,7 @@ let movie_genre_input_up = document.querySelector('#movieGenre_id')
 let movie_picture_input_up = document.querySelector('#moviePicture_id')
 
 
-postBtn.addEventListener('click', (event) => {
+updateBtn.addEventListener('click', (event) => {
 
     console.log('event', event);
       event.preventDefault();
